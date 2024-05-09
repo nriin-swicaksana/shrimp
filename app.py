@@ -10,10 +10,10 @@ from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.impute import SimpleImputer
 from sklearn.metrics import mean_squared_error
 
-survival_rate = open('survival_rate_model.pkl')
-abw = open('average_weight_prediction_model.pkl')
-biomass = open('biomass.pkl')
-rev = open('revenue.pkl')
+survival_rate = open('survival_rate_model.pkl', encoding="utf8", errors='ignore')
+abw = open('average_weight_prediction_model.pkl', encoding="utf8", errors='ignore')
+biomass = open('biomass.pkl', encoding="utf8", errors='ignore')
+rev = open('revenue.pkl', encoding="utf8", errors='ignore')
 
 # Load survival rate prediction model
 survival_rate_model = pickle.load(survival_rate)
