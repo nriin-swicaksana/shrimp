@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import joblib
+import pickle
 
 survival_rate = open('survival_rate_model.pkl', 'rb')
 abw = open('average_weight_prediction_model.pkl', 'rb')
@@ -8,16 +9,16 @@ biomass = open('biomass.pkl', 'rb')
 rev = open('revenue.pkl', 'rb')
 
 # Load survival rate prediction model
-survival_rate_model = joblib.load(survival_rate)
+survival_rate_model = pickle.load(survival_rate)
 
 # Load ABW prediction model
-abw_model = joblib.load(abw)
+abw_model = pickle.load(abw)
 
 # Load biomass prediction model
-biomass_model = joblib.load(biomass)
+biomass_model = pickle.load(biomass)
 
 # Load revenue prediction model
-revenue_model = joblib.load(rev)
+revenue_model = pickle.load(rev)
 
 # Streamlit app
 def main():
