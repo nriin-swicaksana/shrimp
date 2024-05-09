@@ -10,22 +10,22 @@ from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.impute import SimpleImputer
 from sklearn.metrics import mean_squared_error
 
-survival_rate = open('survival_rate_model.pkl', 'rb')
-abw = open('average_weight_prediction_model.pkl', 'rb')
-biomass = open('biomass.pkl', 'rb')
-rev = open('revenue.pkl', 'rb')
+survival_rate = open('survival_rate_model.pkl')
+abw = open('average_weight_prediction_model.pkl')
+biomass = open('biomass.pkl')
+rev = open('revenue.pkl')
 
 # Load survival rate prediction model
-survival_rate_model = pickle.load(survival_rate)
+survival_rate_model = joblib.load(survival_rate)
 
 # Load ABW prediction model
-abw_model = pickle.load(abw)
+abw_model = joblib.load(abw)
 
 # Load biomass prediction model
-biomass_model = pickle.load(biomass)
+biomass_model = joblib.load(biomass)
 
 # Load revenue prediction model
-revenue_model = pickle.load(rev)
+revenue_model = joblib.load(rev)
 
 # Streamlit app
 def main():
