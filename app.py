@@ -2,17 +2,22 @@ import streamlit as st
 import pandas as pd
 import joblib
 
+survival_rate = open('survival_rate_model.pkl', 'rb')
+abw = open('average_weight_prediction_model.pkl', 'rb')
+biomass = open('biomass.pkl', 'rb')
+rev = open('revenue.pkl', 'rb')
+
 # Load survival rate prediction model
-survival_rate_model = joblib.load('C:/Users/ahmad.wicaksana/Downloads/Data/survival_rate_model.pkl')
+survival_rate_model = joblib.load(survival_rate)
 
 # Load ABW prediction model
-abw_model = joblib.load('C:/Users/ahmad.wicaksana/Downloads/Data/average_weight_prediction_model.pkl')
+abw_model = joblib.load(abw)
 
 # Load biomass prediction model
-biomass_model = joblib.load('C:/Users/ahmad.wicaksana/Downloads/Data/biomass.pkl')
+biomass_model = joblib.load(biomass)
 
 # Load revenue prediction model
-revenue_model = joblib.load('C:/Users/ahmad.wicaksana/Downloads/Data/revenue.pkl')
+revenue_model = joblib.load(rev)
 
 # Streamlit app
 def main():
