@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import joblib
-import pickle
+import pickle5 as pickle
 
 survival_rate = open('survival_rate_model.pkl', 'rb')
 abw = open('average_weight_prediction_model.pkl', 'rb')
