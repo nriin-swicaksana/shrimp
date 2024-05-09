@@ -1,12 +1,5 @@
 import streamlit as st
 import pandas as pd
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.linear_model import LinearRegression
-from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import train_test_split, GridSearchCV
-from sklearn.impute import SimpleImputer
-from sklearn.metrics import mean_squared_error
 import joblib
 
 # Load survival rate prediction model
